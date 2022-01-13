@@ -4,14 +4,14 @@ using namespace std;
 class Ebyokunywa{
 
 virtual void AskforAcompanyment()=0;
-	
+
 };
 class Ebyokurya:Ebyokunywa{
  private:
 	string Statch;
 	string Vendor;
 	int Contact;
-	string Name; 
+	string Name;
  public:
  	void setStatch(string statch)
  	{
@@ -47,7 +47,7 @@ class Ebyokurya:Ebyokunywa{
  }
  void IntroduceYourself()
  {
- 	cout<<Name<<" ,You are an amazing farmer at "<<Vendor<<endl;
+ 	cout<<Name<<" ,You are an amazing farmer of "<<Vendor<<endl;
  	cout<<"Your Contact Number Is "<<Contact<<endl;
  	cout<<"Do You Eat Statch "<<Statch<<endl;
  }
@@ -56,11 +56,11 @@ Ebyokurya(string statch, string vendor, int contact, string name)
 	Statch = statch;
 	Vendor = vendor;
 	Contact = contact;
-	Name = name; 
+	Name = name;
 }
 void AskforAcompanyment(){
 	if(Contact<300)
-	cout<<Name<<", You do not Qualify for the Offer"<<endl;
+	cout<<Name<<", You do not Qualify for this Offer"<<endl;
 	else
 	cout<<Name<<" , You Qualify"<<endl;
 }
@@ -81,13 +81,13 @@ class Starter:Ebyokurya{
 int main()
 {
 	Ebyokurya ebyokurya1 = Ebyokurya("Yes", "Mbagathy Market",996,"Katuramu");
-		ebyokurya1.IntroduceYourself();	
+		ebyokurya1.IntroduceYourself();
 	Ebyokurya ebyokurya2 = Ebyokurya("No", "Uhuru Market",296,"Karanja");
-		ebyokurya2.IntroduceYourself();	
+		ebyokurya2.IntroduceYourself();
 	Ebyokurya ebyokurya3 = Ebyokurya("Yes", "Magara Market",496,"Ndaraga");
-		ebyokurya3.IntroduceYourself();	
+		ebyokurya3.IntroduceYourself();
 	Ebyokurya ebyokurya5 = Ebyokurya("No", "Mbucu Market",996,"Mutatu");
-		ebyokurya5.IntroduceYourself();	
+		ebyokurya5.IntroduceYourself();
 	ebyokurya1.setName("Mbaluhira");
 	cout<<"Your Other Name Is, "<<ebyokurya1.getName()<<endl;
 	ebyokurya1.AskforAcompanyment();
