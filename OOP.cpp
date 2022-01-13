@@ -59,7 +59,7 @@ Ebyokurya(string statch, string vendor, int contact, string name)
 	Name = name;
 }
 void AskforAcompanyment(){
-	if(Contact<300)
+	if(Contact<350)
 	cout<<Name<<", You do not Qualify for this Offer"<<endl;
 	else
 	cout<<Name<<" , You Qualify"<<endl;
