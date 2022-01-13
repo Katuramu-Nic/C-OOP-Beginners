@@ -75,7 +75,7 @@ class Starter:Ebyokurya{
 	}
 	void StarterEats()
 	{
-		cout<<getName()<<", "<<getStatch()<<" you eat statch and "<<"you work at "<<getVendor()<<" you ate "<<Salaads<<" as your Starter Foods."<<endl;
+		cout<<getName()<<", "<<getStatch()<<" you ate statch and "<<"you work at "<<getVendor()<<" you ate "<<Salaads<<" as your Starter Foods."<<endl;
 	}
 };
 int main()
