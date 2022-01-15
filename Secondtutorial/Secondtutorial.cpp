@@ -1,8 +1,11 @@
 #include<iostream>
 #include<string>
 using namespace std;
+class AbstractDayMeal{
+    virtual void AskForMoreMeals()=0;
 
-class DayMeal{
+};
+class DayMeal:AbstractDayMeal{
 //Getters and setters, encapsulated data
     private:
     string Mfood;
@@ -31,7 +34,9 @@ int Mtotal;
 
           void setMunitprice(int munitprice)
           {
+              if(Munitprice>-10)
               Munitprice = munitprice;
+
           }
           int getMunitprice()
           {
@@ -46,6 +51,7 @@ void AskforAmeal()
     cout<<"Quantity: "<<Mquantity<<endl;
     Mtotal = Mquantity * Munitprice;
     cout<<"Total Amount: Kshs."<<Mtotal<<endl;
+
 }
 /*The Day Meal Constructor method*/
 DayMeal(string mfood, int mquantity, int munitprice, string mcustomer)
@@ -56,7 +62,15 @@ DayMeal(string mfood, int mquantity, int munitprice, string mcustomer)
     Munitprice = munitprice;
     Mcustomer = mcustomer;
 }
-
+//Abstracted method
+void AskForMoreMeals()
+{
+    //If statement to validate the Unit price in the Day Meal class
+    if(Munitprice<200)
+        cout<<"You are regular Customer"<<endl;
+    else
+        cout<<"You are our premium customer"<<endl;
+}
 };
 int main()
 {
@@ -71,7 +85,14 @@ DayMeal thirddaymeal = DayMeal("Sweet Potatoes & Beef",3,400,"Denis Mungata");
 thirddaymeal.AskforAmeal();
 //Fourth Object
 DayMeal fourthdaymeal = DayMeal("Yams & Beef",6,200,"Peter Waweru");
+//Using the getters and setters
 fourthdaymeal.AskforAmeal();
-firstdaymeal.setMunitprice(40);
-cout<<"The First Order Meal Price has changed to "<<firstdaymeal.getMunitprice()<<"Kshs.";
+firstdaymeal.setMunitprice(4);
+cout<<"The First Order Meal Price has changed to "<<firstdaymeal.getMunitprice()<<"Kshs."<<endl;
+//objects with abstracted dated
+firstdaymeal.AskForMoreMeals();
+seconddaymeal.AskForMoreMeals();
+thirddaymeal.AskForMoreMeals();
+fourthdaymeal.AskForMoreMeals();
+
 }
