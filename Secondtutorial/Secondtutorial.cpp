@@ -7,22 +7,29 @@ class AbstractDayMeal{
 };
 class DayMeal:AbstractDayMeal{
 //Getters and setters, encapsulated data
-    private:
-    string Mfood;
+private:
+string  Mcustomername;
+string Mfood;
 int Mquantity;
 int Munitprice;
-string Mcustomer;
 int Mtotal;
       public:
-          void setMfood(string mfood)
-          {
-              Mfood = mfood;
-          }
-          string getMfood()
-          {
-              return Mfood;
-          }
-
+        void setMcustomername(string mcustomername)
+              {
+                Mcustomername = mcustomername;
+              }
+            string getMcustomername()
+                {
+            return Mcustomername;
+            }
+            void setMfood(string mfood)
+              {
+                  Mfood = mfood;
+              }
+            string getMfood()
+            {
+            return Mfood;
+            }
           void setMquantity(int mquantity)
           {
               Mquantity = mquantity;
@@ -34,7 +41,7 @@ int Mtotal;
 
           void setMunitprice(int munitprice)
           {
-              if(Munitprice>-10)
+              if(Munitprice>10)
               Munitprice = munitprice;
 
           }
@@ -42,10 +49,12 @@ int Mtotal;
           {
               return Munitprice;
           }
+
+
 //Output methods
 void AskforAmeal()
 {
-    cout<<"Customer Name: "<<Mcustomer<<endl;
+    cout<<"Customer Name: "<<Mcustomername<<endl;
     cout<<"Food Ordered: "<<Mfood<<endl;
     cout<<"Unit Price: "<<Munitprice<<endl;
     cout<<"Quantity: "<<Mquantity<<endl;
@@ -54,13 +63,13 @@ void AskforAmeal()
 
 }
 /*The Day Meal Constructor method*/
-DayMeal(string mfood, int mquantity, int munitprice, string mcustomer)
+DayMeal(string mfood, int mquantity, int munitprice, string mcustomername)
 {
     //Initializing variables in the Meals constructor method
     Mfood = mfood;
     Mquantity = mquantity;
     Munitprice = munitprice;
-    Mcustomer = mcustomer;
+    Mcustomername = mcustomername;
 }
 //Abstracted method
 void AskForMoreMeals()
@@ -70,6 +79,21 @@ void AskForMoreMeals()
         cout<<"You are regular Customer"<<endl;
     else
         cout<<"You are our premium customer"<<endl;
+}
+};
+class Lunch:DayMeal{
+          public:
+    string Lfood;
+    int Lprice;
+Lunch(string mfood, int mquantity, int munitprice, string mcustomer, string lfood, int lprice)
+:DayMeal(mfood, mquantity, munitprice, mcustomer)
+{
+Lfood = lfood;
+Lprice = lprice;
+}
+void OrderForLunch()
+{
+    cout<<getMcustomername()<<" You Ordered "<<Lfood<<" for lunch but you ate "<<getMfood()<<" for a regular meal"<<endl;
 }
 };
 int main()
@@ -94,5 +118,6 @@ firstdaymeal.AskForMoreMeals();
 seconddaymeal.AskForMoreMeals();
 thirddaymeal.AskForMoreMeals();
 fourthdaymeal.AskForMoreMeals();
-
+Lunch firstlunch = Lunch("Ugali & Fish",5,5000,"Katuramu Nicholus", "Nduma", 4000);
+firstlunch.OrderForLunch();
 }
