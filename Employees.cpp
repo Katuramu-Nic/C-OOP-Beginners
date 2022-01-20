@@ -67,9 +67,29 @@ void AskForPromotion()
 
 
 };
+class SalaryDeductions:Employees{
+    public:
+    int Nssf;
+    int Paye;
+    int Nhif;
+SalaryDeductions(string ename, int hourly_rate, int hours_worked, int nssf, int paye, int nhif)
+:Employees(ename, hourly_rate,hours_worked)
+{
+    Nssf = nssf;
+    Paye = paye;
+    Nhif = nhif;
+}
+//Method for the enrited method
+void EmplodeductionCalculator()
+{
+
+    cout<<Ename<<" Your Final Deduction is "<<Nssf<<endl;
+}
+
+};
 int main()
 {
-    //using the switch statement
+//using the switch statement
 int weeknumber;
 cout<<"Enter Number Between"<<endl;
 cin>>weeknumber;
@@ -109,5 +129,8 @@ secondemployee.AskForPromotion();
 thirdemployee.AskForPromotion();
 fourthemployee.AskForPromotion();
 firstemployee.setEname("Katuramu Martin");
-cout<<"Our next Customer Is: "<<firstemployee.getEname();
+cout<<"Our next Customer Is: "<<firstemployee.getEname()<<endl;
+//Inherited Object
+SalaryDeductions firtDeductions = SalaryDeductions("Katuramu Nicholus", 75,12, 25,13,10);
+firtDeductions.EmplodeductionCalculator();
 }
