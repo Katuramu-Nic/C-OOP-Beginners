@@ -64,9 +64,36 @@ void AskForPromotion()
         cout<<"Perfom Well Next Time For Promotion"<<endl;
     }
 }
+
+
 };
 int main()
 {
+    //using the switch statement
+int weeknumber;
+cout<<"Enter Number Between"<<endl;
+cin>>weeknumber;
+switch(weeknumber)
+{
+case 1:cout<<"Monday"<<endl;
+break;
+case 2:
+    cout<<"Tuesday";
+break;
+case 3:
+    cout<<"Wednsday"<<endl;
+break;
+case 4:
+    cout<<"Thursday"<<endl;
+break;
+case 5: cout<<"Friday"<<endl;
+break;
+case 6: cout<<"Saturday"<<endl;
+break;
+case 7: cout<<"Sunday"<<endl;
+break;
+default: cout<<"You Entered a Wrong Number"<<endl;
+}
     //Employee Objects
 Employees firstemployee = Employees("Katuramu Nicholus", 12, 10);
 firstemployee.EmployeesPayRoll();
