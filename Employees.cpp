@@ -11,6 +11,33 @@ int Hourly_rate;
 int Hours_worked;
 int Monthly_salary;
 int Annual_salary;
+//using getters and setter/encaspsulation
+void setEname(string ename)
+{
+    Ename = ename;
+}
+string getEname()
+{
+    return Ename;
+}
+void setHourly_rate(int hourly_rate)
+{
+    Hourly_rate = hourly_rate;
+}
+int getHourly_rate()
+{
+
+    return Hourly_rate;
+}
+// Hours_worked
+void setHours_worked(int hours_worked)
+{
+    Hours_worked = hours_worked;
+}
+int getHours_worked()
+{
+    return Hours_worked;
+}
 void EmployeesPayRoll()
 {
 cout<<"You Name Is: "<<Ename<<endl;
@@ -54,4 +81,5 @@ firstemployee.AskForPromotion();
 secondemployee.AskForPromotion();
 thirdemployee.AskForPromotion();
 fourthemployee.AskForPromotion();
+firstemployee.setEname("Katuramu Martin");
 }
