@@ -82,4 +82,5 @@ secondemployee.AskForPromotion();
 thirdemployee.AskForPromotion();
 fourthemployee.AskForPromotion();
 firstemployee.setEname("Katuramu Martin");
+cout<<"Our next Customer Is: "<<firstemployee.getEname();
 }
