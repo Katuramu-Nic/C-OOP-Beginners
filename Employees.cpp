@@ -4,7 +4,7 @@ using namespace std;
 class AbstractEmployee{
 virtual void AskForPromotion()=0;
 };
-class Employees{
+class Employees:AbstractEmployee{
     public:
 string Ename;
 int Hourly_rate;
@@ -26,9 +26,21 @@ Employees(string ename, int hourly_rate, int hours_worked)
     Hourly_rate = hourly_rate;
     Hours_worked = hours_worked;
 }
+void AskForPromotion()
+{
+    if(Annual_salary>1500)
+    {
+        cout<<"You are a D Class Employee"<<endl;
+    }
+    else
+    {
+        cout<<"Perfom Well Next Time For Promotion"<<endl;
+    }
+}
 };
 int main()
 {
+    //Employee Objects
 Employees firstemployee = Employees("Katuramu Nicholus", 12, 10);
 firstemployee.EmployeesPayRoll();
 Employees secondemployee = Employees("Peter Waweru",10,50);
@@ -36,5 +48,10 @@ secondemployee.EmployeesPayRoll();
 Employees thirdemployee = Employees("Denis Murathe", 8,12);
 thirdemployee.EmployeesPayRoll();
 Employees fourthemployee = Employees("Winnie Kinyaga", 6,12);
+//Abstracted Objects
 fourthemployee.EmployeesPayRoll();
+firstemployee.AskForPromotion();
+secondemployee.AskForPromotion();
+thirdemployee.AskForPromotion();
+fourthemployee.AskForPromotion();
 }
