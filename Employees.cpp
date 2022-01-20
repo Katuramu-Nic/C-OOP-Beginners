@@ -133,4 +133,8 @@ cout<<"Our next Customer Is: "<<firstemployee.getEname()<<endl;
 //Inherited Object
 SalaryDeductions firtDeductions = SalaryDeductions("Katuramu Nicholus", 75,12, 25,13,10);
 firtDeductions.EmplodeductionCalculator();
+//c++ structure & first program, data stracture, data types, Functions,  encapsulation-Getters and Setters
+//Class, Objects, Access Modifiers, Constructor Method, Abstraction, virtual abstraction, if statements
+//Switch statements,calculations
+
 }
