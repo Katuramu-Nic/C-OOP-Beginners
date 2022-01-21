@@ -127,8 +127,31 @@ case 6: cout<<"Saturday"<<endl;
 break;
 case 7: cout<<"Sunday"<<endl;
 break;
-default: cout<<"You Entered a Wrong Number"<<endl;
+default:
+cout<<"You Entered a Wrong Number"<<endl;
 }
+//while condition
+int Jeans = 0;
+while(Jeans <=8)
+{
+    cout<<"Jeans Number:-"<<Jeans<<endl;
+    Jeans++;
+}
+//Do While  Condition
+
+int Jenas=0;
+do{
+    cout<<"Jenas:-"<<Jenas<<endl;
+    Jenas++;
+}
+ while(Jenas<=8);
+ ///Arrays
+ int Jeansey[] = {40,80};
+ cout<<"First Jeansey Array:-"<<Jeansey[2]<<endl;
+ for(int beans=0; beans<=8; beans++)
+ {
+     cout<<"Beans:-"<<beans<<endl;
+ }
     //Employee Objects
 Employees firstemployee = Employees("Katuramu Nicholus", 12, 10);
 firstemployee.EmployeesPayRoll();
