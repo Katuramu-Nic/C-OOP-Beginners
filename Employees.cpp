@@ -67,7 +67,7 @@ void AskForPromotion()
 
 
 };
-class SalaryDeductions:Employees{
+class SalaryDeductions:public Employees{
     public:
     int Nssf;
     int Paye;
@@ -86,6 +86,21 @@ void EmplodeductionCalculator()
     cout<<Ename<<" Your Final Deduction is "<<Nssf<<endl;
 }
 
+};
+class CasualWorkers:public Employees{
+public:
+    string Corerole;
+    string Jobnumber;
+    void DailyRoutine()
+ {
+     cout<<Ename<<" your Job Number Is:-"<<Jobnumber<<endl;
+ }
+ CasualWorkers(string ename, int hourly_rate, int hours_worked,string corerole,string jobnumber)
+ :Employees(ename,hourly_rate, hours_worked)
+ {
+  Corerole = corerole;
+  Jobnumber = jobnumber;
+ }
 };
 int main()
 {
@@ -133,6 +148,10 @@ cout<<"Our next Customer Is: "<<firstemployee.getEname()<<endl;
 //Inherited Object
 SalaryDeductions firtDeductions = SalaryDeductions("Katuramu Nicholus", 75,12, 25,13,10);
 firtDeductions.EmplodeductionCalculator();
+firtDeductions.AskForPromotion();
+CasualWorkers casualone = CasualWorkers("Kabagambe Chrisostom",45,10,"Accountant","A0002");
+casualone.DailyRoutine();
+
 //c++ structure & first program, data stracture, data types, Functions,  encapsulation-Getters and Setters
 //Class, Objects, Access Modifiers, Constructor Method, Abstraction, virtual abstraction, if statements
 //Switch statements,calculations
