@@ -2,6 +2,7 @@
 #include<string>
 using namespace std;
 class LoginSystem{
+    public:
 string Username;
 string Password;
 string FirstName;
@@ -26,8 +27,17 @@ Password = "Jean@123";
     else
     cout<<"Your Username or Password is Wrong"<<endl;
 }
+LoginSystem(string username, string password, string firstname, string lastname, string emailaddress)
+{
+    Username = username;
+    Password = password;
+    FirstName = firstname;
+    LastName = lastname;
+    Emailaddress = emailaddress;
+}
 };
 int main()
 {
-
+LoginSystem loginer = LoginSystem("Katuramu","Jean@123","Katuramu","Nicholus","katuramu.ict@gmail.com");
+loginer.Signup();
 }
