@@ -11,8 +11,8 @@ string Emailaddress;
 
 void Signup()
 {
-int LoginAttemps = 0;
-while(LoginAttemps<5)
+int LoginAttempts = 0;
+while(LoginAttempts<5)
 {
 Username = "Katuramu";
 Password = "Jean@123";
@@ -29,9 +29,9 @@ Password = "Jean@123";
         cout<<"You are LoggedIn";
     else
     cout<<"Your Username or Password is Wrong"<<endl;
-    cout<<LoginAttemps++;
-    if(LoginAttemps==5)
-    cout<<"Too Many Attempts system will stop"<<endl;
+    LoginAttempts++;
+    if(LoginAttempts==5)
+        cout<<"You tried Many Times, Systems closed"<<endl;
 
 }
 }
