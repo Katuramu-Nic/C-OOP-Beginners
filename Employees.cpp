@@ -106,7 +106,7 @@ int main()
 {
 //using the switch statement
 int weeknumber;
-cout<<"Enter Number Between"<<endl;
+cout<<"Enter Number Between 1 and 5"<<endl;
 cin>>weeknumber;
 switch(weeknumber)
 {
